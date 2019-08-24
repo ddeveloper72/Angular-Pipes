@@ -10,7 +10,7 @@
           class="badge badge-secondary badge-pill">
           {{ server.status }}
         </span>
-        <strong>{{ server.name }}</strong> | 
+        <strong>{{ server.name | Shorten }}</strong> | 
         {{ server.instanceType | uppercase }} | 
         {{ server.started | date:'fullDate' | titlecase	}}          
         </li>
