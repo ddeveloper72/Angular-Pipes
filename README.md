@@ -1,6 +1,8 @@
-# Using | Pipes in Angular
+# Using | [Pipes in Angular](https://ddeveloper72.github.io/Angular-Pipes/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0. and bootstrap 3.4.1
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0. and bootstrap 3.4.1.
+
+On completion of the tutorial, I updated bootstrap 3.4.1 to 4.2.1 and used Flex bootstrap for the 1st time, instead of the original list groups.
 
 ## Development server
 
