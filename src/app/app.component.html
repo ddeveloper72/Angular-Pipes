@@ -1,28 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-sm-offset-2">
-      <input type="text"
-      class="mb-3" 
-      [(ngModel)]="filteredStatus">
+    <div class="col-sm-12">
+      <input type="text" class="mb-3" [(ngModel)]="filteredStatus">
       <br>
       <button class="btn btn-primary mt-2" (click)="onAddServer()">Add Server</button>
       <br><br>
       <h2>App Status: {{ appStatus | async }}</h2>
       <hr>
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let server of servers | filter:filteredStatus:'status'"
-          [ngClass]="getStatusClasses(server)">          
-          <span
-          class="badge badge-secondary badge-pill">
-          {{ server.status }}
-        </span>
-        <strong>{{ server.name | Shorten:15 }}</strong> | 
-        {{ server.instanceType | uppercase }} | 
-        {{ server.started | date:'fullDate' | titlecase	}}          
-        </li>
-      </ul>
+      <div class="list-group-item d-flex bd-highlight" *ngFor="let server of servers | filter:filteredStatus:'status'"
+        [ngClass]="getStatusClasses(server)">
+        <div class="p-2 w-100 bd-highlight">
+          <strong>{{ server.name | Shorten:15 }}</strong> |
+          {{ server.instanceType | uppercase }} |
+          {{ server.started | date:'longDate' | titlecase	}}
+        </div>
+        <div class="p-2 flex-shrink-1 bd-highlight">
+          <span class="badge badge-secondary badge-pill">
+            {{ server.status }}
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
